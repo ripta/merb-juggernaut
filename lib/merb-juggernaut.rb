@@ -1,10 +1,10 @@
 if defined?(Merb::Plugins)
-
+  
   $:.unshift File.dirname(__FILE__)
-
+  
   load_dependency 'merb-slices'
   Merb::Plugins.add_rakefiles "merb-juggernaut/merbtasks", "merb-juggernaut/slicetasks", "merb-juggernaut/spectasks"
-
+  
   # Register the Slice for the current host application
   Merb::Slices::register(__FILE__)
   

@@ -21,6 +21,17 @@
 # code and views.
 #
 
+dm_gems_version = "0.9.6"
+
+dependency "dm-core", dm_gems_version
+dependency "dm-aggregates", dm_gems_version
+dependency "dm-migrations", dm_gems_version
+dependency "dm-timestamps", dm_gems_version
+dependency "dm-types", dm_gems_version
+dependency "dm-validations", dm_gems_version
+
+use_orm :datamapper
+
 Merb::Config.use do |c|
 
   # Sets up a custom session id key which is used for the session persistence
