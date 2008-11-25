@@ -21,8 +21,12 @@
 # code and views.
 #
 
+merb_gems_version = "1.0"
 dm_gems_version = "0.9.6"
 juggernaut_gems_version = "0.5.7"
+
+dependency "merb-more", merb_gems_version
+dependency "merb-helpers", merb_gems_version
 
 dependency "dm-core", dm_gems_version
 dependency "dm-aggregates", dm_gems_version
