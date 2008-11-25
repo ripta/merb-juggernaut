@@ -43,6 +43,7 @@ if defined?(Merb::Plugins)
     end
     
     # Setup routes inside the host application
+    # The slice is mounted at /merb-juggernaut - note that it comes before default_routes
     #
     # @param scope<Merb::Router::Behaviour>
     #  Routes will be added within this scope (namespace). In fact, any 
@@ -52,12 +53,12 @@ if defined?(Merb::Plugins)
     # @note prefix your named routes with :merb_juggernaut_
     #   to avoid potential conflicts with global named routes.
     def self.setup_router(scope)
-      # example of a named route
+      # Slice-level resource routes
+      scope.resources(:chat_demos)
+      # Default slice-level routes
       scope.match('/index(.:format)').to(:controller => 'main', :action => 'index').name(:index)
-      # the slice is mounted at /merb-juggernaut - note that it comes before default_routes
       scope.match('/').to(:controller => 'main', :action => 'index').name(:home)
-      # enable slice-level default routes by default
-      scope.default_routes
+      # scope.default_routes
     end
     
   end
