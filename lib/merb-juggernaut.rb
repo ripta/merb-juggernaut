@@ -21,9 +21,9 @@ if defined?(Merb::Plugins)
   module MerbJuggernaut
     
     # Slice metadata
-    self.description = "MerbJuggernaut is a chunky Merb slice!"
+    self.description = "Eh chunkeh sliceh of Juggernauteh"
     self.version = "0.0.1"
-    self.author = "Engine Yard"
+    self.author = "Ripta Pasay"
     
     # Stub classes loaded hook - runs before LoadClasses BootLoader
     # right after a slice's classes have been loaded internally.

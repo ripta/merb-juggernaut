@@ -5,11 +5,11 @@ require 'merb-core'
 require 'merb-core/tasks/merb'
 
 GEM_NAME = "merb-juggernaut"
-AUTHOR = "Your Name"
-EMAIL = "Your Email"
+AUTHOR = "Ripta Pasay"
+EMAIL = "github@r8y.org"
 HOMEPAGE = "http://merbivore.com/"
-SUMMARY = "Merb Slice that provides ..."
-GEM_VERSION = "1.0"
+SUMMARY = "A chunky slice of Juggernaut pie."
+GEM_VERSION = "0.0.1"
 
 spec = Gem::Specification.new do |s|
   s.rubyforge_project = 'merb'
@@ -24,6 +24,7 @@ spec = Gem::Specification.new do |s|
   s.email = EMAIL
   s.homepage = HOMEPAGE
   s.add_dependency('merb-slices', '>= 1.0')
+  s.add_dependency('juggernaut', '>= 0.5.7')
   s.require_path = 'lib'
   s.files = %w(LICENSE README Rakefile TODO) + Dir.glob("{lib,spec,app,public,stubs}/**/*")
 end
