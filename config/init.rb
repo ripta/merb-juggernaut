@@ -22,6 +22,7 @@
 #
 
 dm_gems_version = "0.9.6"
+juggernaut_gems_version = "0.5.7"
 
 dependency "dm-core", dm_gems_version
 dependency "dm-aggregates", dm_gems_version
@@ -29,6 +30,8 @@ dependency "dm-migrations", dm_gems_version
 dependency "dm-timestamps", dm_gems_version
 dependency "dm-types", dm_gems_version
 dependency "dm-validations", dm_gems_version
+
+dependency "juggernaut", juggernaut_gems_version
 
 use_orm :datamapper
 
