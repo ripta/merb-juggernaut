@@ -1,0 +1,15 @@
+TODO:
+
+- Fix MerbJuggernaut.description and MerbJuggernaut.version
+- Fix LICENSE with your name
+- Fix Rakefile with your name and contact info
+- Add your code to lib/merb-juggernaut.rb
+- Add your Merb rake tasks to lib/merb-juggernaut/merbtasks.rb
+
+Remove anything that you don't need:
+
+- app/controllers/main.rb MerbJuggernaut::Main controller
+- app/views/layout/merb-juggernaut.html.erb
+- spec/controllers/main_spec.rb controller specs
+- public/* any public files
+- stubs/* any stub files
