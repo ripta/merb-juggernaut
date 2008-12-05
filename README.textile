@@ -1,0 +1,88 @@
+h1. MerbJuggernaut
+
+http://github.com/ripta/merb-juggernaut
+
+Written by Ripta Pasay <github@r8y.org>. Contains scripts and code, some modified
+and some as-is, from juggernaut-jquery[1] and the original juggernaut[2].
+Even this README contains chunks from [2].
+
+A slice of Juggernaut pie. Requires juggernaut 0.5.7 and merb 1.0.
+
+
+h2. How to install
+
+Install it as a gem, from github. If you haven't, add the github gem repository
+as a source:
+
+<pre>
+<code>
+	$ [sudo] gem sources -a http://gems.github.com
+</code>
+</pre>
+
+Then install the gem:
+
+<pre>
+<code>
+	$ [sudo] gem install ripta-merb-juggernaut
+</code>
+</pre>
+
+which should also install the prerequisite gems juggernaut and merb if you don't
+have them already.
+
+
+h2. How to use in your Merb app
+
+Add the gem as a dependency in your Merb app's @config/init.rb@:
+
+<pre>
+<code>
+	dependency "ripta-merb-juggernaut", :require_as => "merb-juggernaut"
+</code>
+</pre>
+
+The @:require_as@ option is required because of the qualified gem names on github.
+
+
+h2. How to run the demos
+
+Download the sources, and change into the directory. Once there, start up
+the juggernaut standalone daemon, and then start up the slice server:
+
+<pre>
+<code>
+	$ juggernaut -c config/juggernaut.yml
+	$ slice
+</code>
+</pre>
+
+The slice should now be available, usually on port 4000.
+
+To send a command from the command line, you can start up the Merb slices
+interactive console:
+
+<pre>
+<code>
+	$ slice -i
+</code>
+</pre>
+
+And send away. For example, to alert all connected Juggernaut clients, type
+the following line into the interactive console:
+
+<pre>
+<code>
+	MerbJuggernaut::Commands.send_to_all('alert("This is a test!");')
+</code>
+</pre>
+
+
+h2. Contributing
+
+To contribute, you should try running the above demos. You can start coding away.
+Be sure to send me pull requests through github.
+
+
+fn1. http://github.com/dvdplm/juggernaut-jquery/
+fn2. http://github.com/maccman/juggernaut_gem/
