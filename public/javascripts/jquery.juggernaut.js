@@ -8,7 +8,7 @@ if (typeof jQuery == 'undefined')
       is_connected: false,
       attempting_to_reconnect: false,
       ever_been_connected: false,
-      hasFirebug: "console" in window && "firebug" in window.console,
+      hasFirebug: "console" in window && ("firebug" in window.console || jQuery.browser.safari),
 
       initialize: function(options){
         this.options = $.extend(this.options, options);
