@@ -1,12 +1,17 @@
 h1. MerbJuggernaut
 
-http://github.com/ripta/merb-juggernaut
-
 Written by Ripta Pasay <github@r8y.org>. Contains scripts and code, some modified
 and some as-is, from juggernaut-jquery[1] and the original juggernaut[2].
 Even this README contains chunks from [2].
 
-A slice of Juggernaut pie. Requires juggernaut 0.5.7 and merb 1.0.
+http://github.com/ripta/merb-juggernaut
+
+A slice of Juggernaut pie. For more information about what Juggernaut is, see [3].
+
+
+h2. Requirements
+
+Requires the gems juggernaut >= 0.5.7 and merb >= 1.0.
 
 
 h2. How to install
@@ -86,3 +91,4 @@ Be sure to send me pull requests through github.
 
 fn1. http://github.com/dvdplm/juggernaut-jquery/
 fn2. http://github.com/maccman/juggernaut_gem/
+fn3. http://juggernaut.rubyforge.org/

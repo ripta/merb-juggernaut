@@ -82,5 +82,6 @@ if defined?(Merb::Plugins)
   
   # Add dependencies for other MerbJuggernaut classes below. Example:
   # dependency "merb-juggernaut/other"
+  require "merb-juggernaut/commands"
   
 end
