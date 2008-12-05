@@ -20,6 +20,9 @@ if defined?(Merb::Plugins)
   # All Slice code is expected to be namespaced inside a module
   module MerbJuggernaut
     
+    CR = "\0"
+    CONFIG = YAML::load(ERB.new(IO.read(Merb.root / "config" / "juggernaut_hosts.yml")).result).freeze
+    
     # Slice metadata
     self.description = "Eh chunkeh sliceh of Juggernauteh"
     self.version = "0.0.1"
