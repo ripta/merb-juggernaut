@@ -116,7 +116,7 @@ class MerbJuggernaut::Commands
           @socket.close if @socket and !@socket.closed?
         end
       end
-      res.collect {|r| ActiveSupport::JSON.decode(r.chomp!(::MerbJuggernaut::CR)) } if response
+      res.collect {|r| JSON.parse(r.chomp!(::MerbJuggernaut::CR)) } if response
     end
     
   private
